@@ -20,7 +20,7 @@ const io = new Server(server, {
 
 io.on("connection", (socket) => {
   const userId = socket.handshake.query.userId;
-
+ 
   if (userId) {
     userSocketMap[userId] = socket.id;
     console.log(`User connected: ${userId}`);

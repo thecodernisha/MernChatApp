@@ -50,51 +50,51 @@ const Signup = () => {
   }
 
   return (
-    <div className="min-w-96 mx-auto">
-      <div className='w-full p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 border border-gray-100'>
-        <h1 className='text-3xl font-bold text-center'>Signup</h1>
+    <div className="min-w-96 mx-auto bg-light-gray">
+      <div className='w-full p-6 rounded-lg shadow border border-gray-300'>
+        <h1 className='text-3xl font-bold text-center text-green-600'>Signup</h1>
         <form onSubmit={onSubmitHandler}>
-          <div>
-            <label className='label p-2'>
+          <div className="mb-4">
+            <label className='label'>
               <span className='text-base label-text'>Full Name</span>
             </label>
             <input
               value={user.fullName}
-              onChange={(e) => setUser({ ...user, fullName: e.target.value })}
-              className='w-full input input-bordered h-10'
+              onChange={(e) => setUser ({ ...user, fullName: e.target.value })}
+              className='w-full input input-bordered h-10 rounded-md'
               type="text"
               placeholder='Full Name' />
           </div>
-          <div>
-            <label className='label p-2'>
+          <div className="mb-4">
+            <label className='label'>
               <span className='text-base label-text'>Username</span>
             </label>
             <input
               value={user.username}
-              onChange={(e) => setUser({ ...user, username: e.target.value })}
-              className='w-full input input-bordered h-10'
+              onChange={(e) => setUser ({ ...user, username: e.target.value })}
+              className='w-full input input-bordered h-10 rounded-md'
               type="text"
               placeholder='Username' />
           </div>
-          <div>
-            <label className='label p-2'>
+          <div className="mb-4">
+            <label className='label'>
               <span className='text-base label-text'>Password</span>
             </label>
             <input
               value={user.password}
-              onChange={(e) => setUser({ ...user, password: e.target.value })}
-              className='w-full input input-bordered h-10'
+              onChange={(e) => setUser ({ ...user, password: e.target.value })}
+              className='w-full input input-bordered h-10 rounded-md'
               type="password"
               placeholder='Password' />
           </div>
-          <div>
-            <label className='label p-2'>
+          <div className="mb-4">
+            <label className='label'>
               <span className='text-base label-text'>Confirm Password</span>
             </label>
             <input
               value={user.confirmPassword}
-              onChange={(e) => setUser({ ...user, confirmPassword: e.target.value })}
-              className='w-full input input-bordered h-10'
+              onChange={(e) => setUser ({ ...user, confirmPassword: e.target.value })}
+              className='w-full input input-bordered h-10 rounded-md'
               type="password"
               placeholder='Confirm Password' />
           </div>
@@ -116,9 +116,9 @@ const Signup = () => {
                 className="checkbox mx-2" />
             </div>
           </div>
-          <p className='text-center my-2'>Already have an account? <Link to="/login"> login </Link></p>
+          <p className='text-center my-2'>Already have an account? <Link to="/login" className="text-green-600"> login </Link></p>
           <div>
-            <button type='submit' className='btn btn-block btn-sm mt-2 border border-slate-700'>Signup</button>
+            <button type='submit' className='btn btn-block btn-sm mt-2 bg-green-600 text-white rounded-md hover:bg-green-700'>Signup</button>
           </div>
         </form>
       </div>
